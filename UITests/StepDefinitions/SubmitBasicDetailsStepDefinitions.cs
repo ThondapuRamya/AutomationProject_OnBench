@@ -13,12 +13,12 @@ namespace UITests.StepDefinitions
     {        
         LoginPage loginPage;
         GetUsersPage getUsersPage;
-        BrandSharkHomePage brandSharkHomePage;     
+         BrandsharkHomePage brandSharkHomePage;     
         public SubmitBasicDetailsStepDefinitions(IObjectContainer objectContainer) :base(objectContainer)
         {                           
             loginPage = new LoginPage(driver);
             getUsersPage = new GetUsersPage(driver);
-            brandSharkHomePage = new BrandSharkHomePage(driver);
+            brandSharkHomePage = new BrandsharkHomePage(driver);
         }
        
         [Given("Launch brandshark application")]

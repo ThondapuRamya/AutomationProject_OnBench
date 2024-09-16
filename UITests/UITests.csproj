@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\UICore\UICore.csproj" />
     <ProjectReference Include="..\SeleniumCore\SeleniumCore.csproj" />
+    <ProjectReference Include="..\UICore\UICore.csproj" />
   </ItemGroup>
 
 </Project>

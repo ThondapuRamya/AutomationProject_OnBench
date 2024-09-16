@@ -1,0 +1,12 @@
+{
+  "WebDriver": {
+    "BrowserName": "Chrome",
+    "BrowserLanguage": "en"
+  },
+  "logger": {
+    "LoggerName": "nlog"
+  },
+  "UIDetails": {
+    "ApplicationUrl": "http://www.mywebsite.com/Getusers"
+  }
+}

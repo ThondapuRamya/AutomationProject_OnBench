@@ -8,14 +8,15 @@ namespace UICore.Pages
     {
         public GetUsersPage(IWebDriver driver) : base(driver) { }
        
-        private IWebElement RequiredHyperLink(string linkText)=> driver.GetElement(By.XPath($"//span[text()='{linkText}']"));
-        private IWebElement VisitWebsite => driver.GetElement(By.XPath("//span[contains(text(),'Visit Website')]"));
+        private IWebElement RequiredHyperLink(string linkText)=> driver.FindElement(By.XPath($"//span[text()='{linkText}']"));
+        private IWebElement VisitWebsite => driver.GetElement(By.CssSelector("//span[contains(text(),'Visit Website')]"));
         public void ClickOnGivenLink(string linkText)
         {
             driver.SwitchTo().Frame(0);         
             driver.Click(RequiredHyperLink(linkText));
             driver.SwitchTo().Frame(1);
-            WebDriverWait.Until(drv=>VisitWebsite.Displayed);
+            WebDriverWait.Until(drv=>VisitWebsite.Displayed);            
+           
         }
 
         public void ClickOnVisitWebsite()

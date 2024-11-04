@@ -16,6 +16,19 @@ namespace UITests
         public BaseTest(IObjectContainer objectContainer)
         {
           driver=  objectContainer.Resolve<IWebDriver>();
-        }       
+        }     
+        
+        public void PalindromeTest()
+        {
+            string input = "";
+            for (int i = 0, j = input.Length; i < input.Length / 2; i++,j--)
+            {
+                if (input[i] == input[j])
+                {
+
+                }
+
+            }
+        }
     }
 }

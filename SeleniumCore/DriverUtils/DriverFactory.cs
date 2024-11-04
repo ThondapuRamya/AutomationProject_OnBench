@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Remote;
 using SeleniumCore.Enums;
 using SeleniumCore.Models;
 
@@ -28,7 +29,8 @@ namespace SeleniumCore.DriverUtils
 
                 default: //BrowserName.Chrome
                     var chromeOptions = WebDriverSettings.ChromeOptions(config);
-                    ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);
+                    // ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);                                      
+                    var chromeDriver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOptions);
                     chromeDriver.Manage().Timeouts().PageLoad.Add(TimeSpan.FromSeconds(60));
                     return chromeDriver;
             }

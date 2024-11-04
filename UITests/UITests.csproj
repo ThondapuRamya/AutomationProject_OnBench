@@ -24,4 +24,10 @@
     <ProjectReference Include="..\UICore\UICore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

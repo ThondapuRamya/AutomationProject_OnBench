@@ -8,6 +8,7 @@ namespace APICore.RestSharp
         public static RestResponse SendRequest(HTTPMethod requestType, RestRequest restRequest)
         {
             RestClient client = new RestClient();
+            
 
             switch (requestType)
             {

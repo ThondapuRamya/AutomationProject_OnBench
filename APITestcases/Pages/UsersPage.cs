@@ -24,8 +24,9 @@ namespace APITestcases.Pages
             string url = BaseUrl+resourceUrl;
 
            RestRequest request= RestAPIRequest.CreateRequest(url);
-
+           
              restResponse = RestAPIResponse.SendRequest(HTTPMethod.GET, request);
+            
             return restResponse;
 
         }
@@ -33,6 +34,7 @@ namespace APITestcases.Pages
         public static bool ValidateGetListOfUsers(int startingRange, int endingRange)
         {
             GetUsers getUsers= JsonConvert.DeserializeObject<GetUsers>(restResponse.Content);
+         
            var allRecords= getUsers.data.ToList();
             foreach (var record in allRecords)
             {
